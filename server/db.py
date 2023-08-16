@@ -54,17 +54,3 @@ def delete_paste(paste_collection, paste_id):
 
     except Exception as e:
         return False, e
-
-if __name__ == "__main__":   
-  
-    # Get the database
-    #dbname = get_database('localhost', 27017)
-    #collection_name = dbname["pastes"]
-    #paste_2_test = Paste(id="123457", content="This is a test paste 2")
-    #collection_name.insert_many([paste_2_test.mongo_obj])
-
-    paste_collection = get_paste_collection()
-    paste = create_paste(content="This is a test paste")
-    #paste_bad = Paste(id="1a3b4daa-f7b3-4e78-946b-13266a8d935c", content="asdf")
-    #print(insert_paste(paste_collection, paste))
-    print(delete_paste(paste_collection, '86355668-b932-47f5-aa08-24d989d69206'))
